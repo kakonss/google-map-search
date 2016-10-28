@@ -9,6 +9,7 @@
     
     <!-- bootstrap 3.3.6 -->
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
 
     <!-- google api -->
     <link rel="stylesheet" type="text/css" href="css/google-placesearch.css"/>
@@ -18,27 +19,27 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-4" style="border: 2px solid #000000;margin-top: 1em; padding-bottom: 22em;">
-              <div class="row" style="float:left;">
+            <div class="col-md-4 col-sm-4 left-pane">
+              <div class="row left-sub-pane">
                 <input id="pac-input" class="controls" type="text" placeholder="Search Box" style="position:absolute; left:0px;">
-                <div style="position: absolute;top: 77%;left: 5%;width:25em;">
-                <input type="radio" id="red" name="color" value="red" ><span style="padding-left: 5%;">Red marker</span> <br>
-                <input type="radio" id="green" name="color" value="green" ><span style="padding-left: 5%;">Green marker</span><br>
-                <input type="radio" id="blue" name="color" value="blue"><span style="padding-left: 5%;">Blue marker</span><br>
-              </div>
+                <div class="color">
+                 <input type="radio" id="red" name="color" value="red" ><span class="span-area">Red marker</span> <br>
+                 <input type="radio" id="green" name="color" value="green" ><span class="span-area">Green marker</span><br>
+                 <input type="radio" id="blue" name="color" value="blue"><span class="span-area">Blue marker</span><br>
+                </div>
               </div>
             </div>
             <div class="col-md-8 col-sm-8" id="map-div">
-                 <div id="map" style="width:100%;height:325px;float: right;padding-top: 1em;"></div>
+                <div id="map"></div>
             </div>
         </div>
 
         <div class="row">
-           <div style="border: 2px solid #000000;padding-bottom: 10em;margin-top: 1em;" class="col-md-12 col-sm-12">
-                <div class="col-md-4 col-sm-4" style="width: 25em;">
+           <div class="col-md-12 col-sm-12 bottom-pane">
+                <div class="col-md-4 col-sm-4 bottom-sub-pane">
                   </br><h2>Nearby Attarctions</h2></br>
                   <ul id="places"></ul>
-                  <button id="more" style="margin-top: 1em;margin-left: 1em;">More results</button>
+                  <button id="more">More results</button>
                 </div>
            </div>
         </div>
