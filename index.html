@@ -5,62 +5,53 @@
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width" />
     
-    <title>Viewer Demo</title>
+    <title>Google Place Search Demo</title>
     
     <!-- bootstrap 3.3.6 -->
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css"/>
 
     <!-- google api -->
-    <link rel="stylesheet" type="text/css" href="css/google-searchbox.css"/>
-    <link rel="stylesheet" type="text/css" href="css/google-place-search-pagination.css"/>
-
+    <link rel="stylesheet" type="text/css" href="css/google-placesearch.css"/>
 
 </head>
 <body>
 
     <div class="container">
         <div class="row">
-         
             <div class="col-md-4 col-sm-4" style="border: 2px solid #000000;margin-top: 1em; padding-bottom: 22em;">
               <div class="row" style="float:left;">
                 <input id="pac-input" class="controls" type="text" placeholder="Search Box" style="position:absolute; left:0px;">
-                <div style="position: absolute;top: 77%;left: 5%">
-                <input type="radio" ><span style="padding-left: 5%;">Red marker</span> </input></br>
-                <input type="radio" ><span style="padding-left: 5%;">Green marker</span> </input></br>
-                <input type="radio" ><span style="padding-left: 5%;">Blue marker</span> </input>
-                </div>
-                
+                <div style="position: absolute;top: 77%;left: 5%;width:25em;">
+                <input type="radio" id="red" name="color" value="red" ><span style="padding-left: 5%;">Red marker</span> <br>
+                <input type="radio" id="green" name="color" value="green" ><span style="padding-left: 5%;">Green marker</span><br>
+                <input type="radio" id="blue" name="color" value="blue"><span style="padding-left: 5%;">Blue marker</span><br>
               </div>
-              
-               
+              </div>
             </div>
-            <div class="col-md-8 col-sm-8">
+            <div class="col-md-8 col-sm-8" id="map-div">
                  <div id="map" style="width:100%;height:325px;float: right;padding-top: 1em;"></div>
             </div>
         </div>
 
         <div class="row">
            <div style="border: 2px solid #000000;padding-bottom: 10em;margin-top: 1em;" class="col-md-12 col-sm-12">
-                <b>Nearby Attarctions</b></br>
-               <button id="myButton">More results</button>
+                <div class="col-md-4 col-sm-4" style="width: 25em;">
+                  </br><h2>Nearby Attarctions</h2></br>
+                  <ul id="places"></ul>
+                  <button id="more" style="margin-top: 1em;margin-left: 1em;">More results</button>
+                </div>
            </div>
         </div>
     </div>
  
          
-            
-
-    
-    
-    
-
-    <script type="text/javascript" src="js/google-searchbox.js"></script>
-    <!--<script type="text/javascript" src="js/google-place-search-pagination.js"></script>-->
+    <!-- google api -->
+    <script type="text/javascript" src="js/google-placesearch.js"></script>
 
 
- <!-- Replace the value of the key parameter with your own API key. -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlDnu3fFHC0WKYnEBUVxt0phyVraYrqSA&libraries=places&callback=initAutocomplete" async defer></script>
-        <!-- google api -->
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlDnu3fFHC0WKYnEBUVxt0phyVraYrqSA&libraries=places&callback=initAutocomplete" async defer></script>
+        
      
 </body>
 </html>
